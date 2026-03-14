@@ -1,0 +1,20 @@
+package arraylist;
+import java.util.*;
+public class Joblist {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String> job = new ArrayList(6);
+		String Company = sc.nextLine();
+		String Role = sc.nextLine();
+		job.add(Company+"-"+Role);
+		addjobs(Company,Role);
+		
+
+	}
+	public static void addjobs(String Company,String Role) {
+		System.out.print("Enter the company name : "+Company);
+		System.out.println("Enter the role : "+Role);
+	}
+
+}

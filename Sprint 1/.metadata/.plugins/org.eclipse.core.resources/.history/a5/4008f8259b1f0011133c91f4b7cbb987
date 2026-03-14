@@ -1,0 +1,22 @@
+package arraylist;
+import java.util.*;
+public class Joblist {
+	static ArrayList<String> job = new ArrayList(1);
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String Company = sc.nextLine();
+		String Role = sc.nextLine();
+		addjobs(Company,Role);
+		
+
+	}
+	public static void addjobs(String Company,String Role) {
+		job.add(Company+"-"+Role);
+	}
+	public static void viewjobs() {
+		for(String s:job) {
+			System.out.println(s);
+		}
+	}
+
+}
