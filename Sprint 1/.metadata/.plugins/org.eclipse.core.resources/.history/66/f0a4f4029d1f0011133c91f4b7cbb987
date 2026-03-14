@@ -1,0 +1,50 @@
+package arraylist;
+import java.util.*;
+public class Joblist {
+	static ArrayList<String> job = new ArrayList(1);
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		displaymenu();
+		int choice = sc.nextInt();
+		switch(choice) {
+		case 1:
+			String Company = sc.nextLine();
+			String Role = sc.nextLine();
+			addjobs(Company,Role);
+		case 2:
+			viewjobs();
+		case 3:
+			countjobs();
+		case 4:
+			System.exit(0);
+			break;
+		default:
+			System.out.println("Invalid Input please check and retry again !!!");
+		}
+		
+			
+		
+		
+
+	}
+	public static void displaymenu() {
+		System.out.println("------Job--Utility--Sysem------");
+		System.out.println("1.Add jobs");
+		System.out.println("2.View jobs");
+		System.out.println("3.Count jobs");
+		System.out.println("4.Exit");
+	}
+	public static void addjobs(String Company,String Role) {
+		job.add(Company+"-"+Role);
+	}
+	public static void viewjobs() {
+		for(String s:job) {
+			System.out.println(s);
+		}
+	}
+	public static int countjobs() {
+		return job.size();
+	}
+
+}
